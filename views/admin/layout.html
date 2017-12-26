@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/public/css/bootstrap-responsive.min.css" type="text/css">
+    <script src="/public/js/jquery-3.2.1.min.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+</head>
+<body>
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active"><a href="#">Home</a></li>
+    <li role="presentation"><a href="/admin/user">用户管理</a></li>
+    <li class="dropdown" role="presentation"><a href="/admin/category" class="dropdown-toggle"
+                                                data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                aria-expanded="false">分类管理 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="/admin/category">分类首页</a></li>
+            <li><a href="/admin/category/add">添加分类</a></li>
+        </ul>
+    </li>
+    <li class="dropdown" role="presentation"><a href="/admin/content" class="dropdown-toggle"
+                                                data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                aria-expanded="false">内容管理 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="/admin/content">内容首页</a></li>
+            <li><a href="/admin/content/add">添加内容</a></li>
+        </ul>
+    </li>
+    <li role="presentation"><a href="#">Messages</a></li>
+</ul>
+<div class="container-fluid">
+    {% block main %}
+    {% endblock }
+</div>
+</body>
+</html>
